@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+    <script src="scripts.js" defer></script>
+
+    <title>Search</title>
+
+</head>
+<body>
+    <main>
+        <div class="title">
+            ?udm=14<span class="mini-title">&nbsp;google is good again</span>
+        </div>
+
+        <form id="search-form">
+            <input type="text" id="search-bar" class="search-bar"
+                   placeholder="Start typing..." autocomplete="off"
+                   onkeydown="handleKeyPress(event)"> &nbsp;
+            <input type="submit" class="search-button" value="Search!">
+        </form>
+
+        <div id="message" class="message"></div>
+
+        <!-- <div class="subtitle">google is good again</div> -->
+    </main>
+
+    <footer>
+        <p>This project is open source! You can check out its code <a href="https://github.com/jojobinx17/udm14">here</a>.</p>
+    </footer>
+
+</body>
+</html>
