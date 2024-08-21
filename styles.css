@@ -1,4 +1,3 @@
-/* Stylesheet */
 
 :root {
     --macchiato-base: #24273a;
@@ -30,15 +29,17 @@
 }
 
 * {
+    transition: 0.3s;
     font-family: "Fira Code", monospace;
     font-weight: 600;
     font-optical-sizing: auto;
     text-align: center;
+}
 
+body {
     color: var(--macchiato-text);
     background-color: var(--macchiato-base);
 
-    transition: 0.3s;
 }
 
 input {
@@ -129,7 +130,7 @@ a:hover::after {
 
 }
 
-modal {
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -138,8 +139,48 @@ modal {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    background-color: rgba(24, 25, 38, 0.6);
+    backdrop-filter: blur(20px);
+
 }
+
+.modal-content {
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    padding: 2em 2em 3em 2em;
+
+    color: var(--macchiato-text);
+    border: 3px solid var(--macchiato-surface2);
+    border-radius: 2em;
+
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    /* background-color: rgba(24, 25, 38, 0.6); */
+    backdrop-filter: none;
+}
+
+.close {
+    color: var(--macchiato-overlay1);
+    right: 1.5em;
+    top: 1em;
+    position: fixed;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--macchiato-pink);
+    text-decoration: none;
+}
+
 
 footer {
     color: var(--macchiato-subtext0);

@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="scripts.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 
-    <title>Search</title>
+        <script src="scripts.js" defer></script>
 
-</head>
-<body>
-    <main>
-        <div class="title">
-            ?udm=14<span class="mini-title">&nbsp;google is good again</span>
+        <title>Search</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="title">
+                ?udm=14<span class="mini-title">&nbsp;google is good again</span>
+            </div>
+
+            <form id="search-form">
+                <input type="text" id="search-bar" class="search-bar"
+                placeholder="Start typing..." autocomplete="off"> &nbsp;
+                <input type="submit" class="search-button" value="Search!">
+            </form>
+
+            <div id="message" class="message"></div>
+        </main>
+
+        <div id="modal-privacy" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Privacy Policy</h2>
+                <p>
+                    Our privacy policy is simple: <i>we don't collect anything.</i> No cookies, analytics, or any other tracking nonsense. <br />
+                </p>
+            </div>
         </div>
 
-        <form id="search-form">
-            <input type="text" id="search-bar" class="search-bar"
-                   placeholder="Start typing..." autocomplete="off"
-                   onkeydown="handleKeyPress(event)"> &nbsp;
-            <input type="submit" class="search-button" value="Search!">
-        </form>
+        <div id="modal-about" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>What's 'udm=14'?</h2> <br />
+                <p>
+                    '?udm=14' is a search <a target="_blank" href="https://en.wikipedia.org/wiki/Query_string">query parameter</a> that tells Google to only show website-based results from your search. <br /> <br /> This means no clutter, ads, or AI summaries. Just websites, exactly as it should be.
+                </p>
+            </div>
+        </div>
 
-        <div id="message" class="message"></div>
-    </main>
-
-    <modal id="modal-privacy">
-        <h2>Privacy Policy</h2>
-        <p>
-            Our privacy policy is simple: <i>we don't collect anything.</i> No cookies, analytics, or any other tracking nonsense. <br />
-        </p>
-    </modal>
-    <modal id="modal-about">
-        <h2>What's 'udm=14'?</h2> <br />
-        <p>
-            '?udm=14' is a <a target="_blank" href="https://en.wikipedia.org/wiki/Query_string">query parameter</a> that tells Google to only show website-based results from your search. <br /> <br /> This means no clutter, ads, or AI summaries. Just websites, exactly as it should be.
-        </p>
-    </modal>
-
-    <footer>
-        Made with ♥ by <a target="_blank" href="https://github.com/jojobinx17">Jojobinx17</a>&nbsp;|&nbsp;
-        This project is open source! You can check out its code <a target="_blank" href="https://github.com/jojobinx17/search">here</a>.&nbsp;|&nbsp;
-        <a href="javascript:alert('TBA, sorry.')">What's '?udm=14'?</a>&nbsp;|&nbsp;
-        <a href="javascript:alert('We don\'t collect anything. Simple as that!')">Privacy</a> 
-    </footer>
-
-</body>
+        <footer>
+            Made with ♥ by <a target="_blank" href="https://github.com/jojobinx17">Jojobinx17</a>&nbsp;|&nbsp;
+            This project is open source! You can check out its code <a target="_blank" href="https://github.com/jojobinx17/search">here</a>.&nbsp;|&nbsp;
+            <a href="#" id="about-link">What's '?udm=14'?</a>&nbsp;|&nbsp;
+            <a href="#" id="privacy-link">Privacy</a>
+        </footer>
+    </body>
 </html>
